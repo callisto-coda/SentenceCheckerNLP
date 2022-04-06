@@ -2,15 +2,18 @@
 Trained a neural network with a locally-stored dictionary and a set of correct sentences. Then tested its effectiveness using a set of both correct and incorrect sentences.
 
 //Pseudocode of NLP Program
+
 //Author: Kelly T.
 
 Overall substructure of program:
 
 At Start:
+
 1. Connect to Dictionary API or load Dictionary 
 2. Feed Neural Network with Syntactically correct sentences of various types and differing data sizes
 
 At Runtime:
+
 3. Allow Neural Network to process sentences 
 3.1 Network uses self-learning algorithm to determine what constitutes a correct sentence.
 4. Stop the self-learning after initial dataset has been processed.
@@ -26,6 +29,7 @@ At Runtime:
 General Program Structure:
 
 int main()
+
 {
 
 	ConnectToAPI();  //Or  LoadDictionaryFromLocalDrive();
@@ -48,18 +52,21 @@ int main()
 }
 
 ConnectToAPI()
+
 {
 	Connect to API and Test Connection
 	DEBUG: check if calls are correct
 }
 
 LoadLearningSet()
+
 {
 	Open text file containing varying amount of sentences //100+
 	Put into data structure (Array/List etc)
 }
 
 SelfLearn(PreviousRules)
+
 {
 	LoadPreviousRules if provided
 
@@ -77,6 +84,7 @@ SelfLearn(PreviousRules)
 
 
 CheckSentenceValidity(Input)
+
 {
 	Scan input sentence for attribute and give it a "score"
 	Compare input sentence's "score" with the self-learning criteria to see if it passes
